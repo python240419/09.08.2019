@@ -26,12 +26,42 @@ print(rexy)
 # exercise:
 # create Employee class
 # __init__ (self, name, address, salary)
-# create salary getter/setter to avoid negative salary
-# implement __str__
-#
 # create Manager class
+# create salary getter/setter
+# to avoid negative salary
+# implement __str__
 # __init__ (self, name, address, salary, numberOfEmployeesBenieth)
-#     call super() ...
-# implement __str__  and call super()__str__
-# create a manager and chnage it salary to something invalid and print
-#    then change it to something valid and print
+#   call super() ...
+#   implement __str__  and call super()__str__
+
+class Employee:
+    def __init__ (self, name, address, salary):
+        self.__salary = None
+        self.name = name
+        self.address = address
+        self.salary = salary
+    def __str__(self):
+        return f'{self.name} {self.address} {self.salary}'
+
+    @property
+    def salary(self):
+        return self.__salary
+
+    @salary.setter
+    def salary(self, value):
+        if value >= 0:
+            self.__salary = value
+
+class Manager(Employee):
+    def __init__(self, name, address, salary, numOfEmployees):
+        super().__init__(name, address, salary)
+        self.numOfEmployees = numOfEmployees
+    def __str__(self):
+        return super().__str__() + f' {self.numOfEmployees}'
+
+m = Manager("Big boss", "Hertzeliya", 42000, 15)
+print(m)
+m.salary = -5 # should not change
+print(m)
+m.salary = m.salary + 4735
+print(m)
