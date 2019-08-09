@@ -28,6 +28,8 @@ print(rexy)
 # __init__ (self, name, address, salary)
 # create salary getter/setter
 # to avoid negative salary
+# implement __str__
+#
 # create Manager class
 # implement __str__
 # __init__ (self, name, address, salary, numberOfEmployeesBenieth)
