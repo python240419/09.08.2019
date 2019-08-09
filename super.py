@@ -26,12 +26,12 @@ print(rexy)
 # exercise:
 # create Employee class
 # __init__ (self, name, address, salary)
-# create salary getter/setter
-# to avoid negative salary
+# create salary getter/setter to avoid negative salary
 # implement __str__
 #
 # create Manager class
-# implement __str__
 # __init__ (self, name, address, salary, numberOfEmployeesBenieth)
-#   call super() ...
-#   implement __str__  and call super()__str__
+#     call super() ...
+# implement __str__  and call super()__str__
+# create a manager and chnage it salary to something invalid and print
+#    then change it to something valid and print
