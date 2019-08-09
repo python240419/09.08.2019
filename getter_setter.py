@@ -23,7 +23,11 @@ class Animal:
             self.__age = value
     @property
     def name(self):  # getter
+        # how to check if name property exists in object ?
+        # if not '_Animal__name' in dir(self):
+        #    return None        
         return self.__name
+    
 
     @age.setter
     def name(self, value):
