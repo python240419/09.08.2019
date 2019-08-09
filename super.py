@@ -26,9 +26,9 @@ print(rexy)
 # exercise:
 # create Employee class
 # __init__ (self, name, address, salary)
-# create Manager class
 # create salary getter/setter
 # to avoid negative salary
+# create Manager class
 # implement __str__
 # __init__ (self, name, address, salary, numberOfEmployeesBenieth)
 #   call super() ...
